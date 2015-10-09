@@ -2,6 +2,7 @@ require 'sinatra'
 require "sinatra/json"
 
 set :port, 80
+set :bind, '0.0.0.0'
 
 get '/logs' do
   logs = File.read("./log.txt")
