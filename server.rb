@@ -1,6 +1,8 @@
 require 'sinatra'
 require "sinatra/json"
 
+set :port, 80
+
 get '/logs' do
   logs = File.read("./log.txt")
   stuff = logs.split("\n").map do |line|
